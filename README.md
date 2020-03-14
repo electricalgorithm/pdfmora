@@ -14,7 +14,7 @@ This program needs four arguments. General usage:
 ~$ ./pdftron.sh "[LINK_TO_PDF_WITH_&:]" [START_NUMBER] [END_NUMBER] [OUTPUT_FILE_NAME]
 ```
 
-### LINK_TO_PDF_WITH_&:
+#### LINK_TO_PDF_WITH_&:
 I will clarify this with previous example. Let's assume that we have PDF's in this link:
 ```
 http://xtzxtz.com/y/z/example2.pdf
@@ -29,7 +29,7 @@ This argument tells the script where to start seeking. In our previous example, 
 #### END_NUMBER
 This argument tells the script where to end seeking. In our previous example, there was four pdf in web server and the last one is "example5.pdf". So that our argument needs to be "5".
 
-### OUTPUT_FILE_NAME
+#### OUTPUT_FILE_NAME
 This argument is for merged pdf's filename. It can be anything. Merged pdf will be in same directory as the script. If you want samewhere else, you should declare it on this argument. No need for ".pdf" suffix.
 
 Example decleration for another location:
