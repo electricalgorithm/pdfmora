@@ -1,5 +1,5 @@
-# PDFtron
-PDFtron is a tool to download PDF's and merge them autonomously. I made this script because of downloading sequent pdfs in a web server. For example, if a server has these documents:
+# pdfmora
+pdfmora is a tool to download PDF's and merge them autonomously. I made this script because of downloading sequent pdfs in a web server. For example, if a server has these documents:
 ```
 http://xtzxtz.com/y/z/example2.pdf
 http://xtzxtz.com/y/z/example3.pdf
@@ -8,10 +8,10 @@ http://xtzxtz.com/y/z/example5.pdf
 ```
 You can use this script easily.
 
-## PDFtron Usage
+## pdfmora Usage
 This program needs four arguments. General usage:
 ```
-~$ ./pdftron.sh "[LINK_TO_PDF_WITH_&:]" [START_NUMBER] [END_NUMBER] [OUTPUT_FILE_NAME]
+~$ ./pdfmora.sh "[LINK_TO_PDF_WITH_&:]" [START_NUMBER] [END_NUMBER] [OUTPUT_FILE_NAME]
 ```
 
 #### LINK_TO_PDF_WITH_&:
@@ -39,7 +39,7 @@ Example decleration for another location:
 
 ## Usage for previous example:
 ```
-~$ ./pdftron.sh "http://xtzxtz.com/y/z/example&:.pdf" 2 5 outputFile.pdf
+~$ ./pdfmora.sh "http://xtzxtz.com/y/z/example&:.pdf" 2 5 outputFile.pdf
 ```
 ## Outputs for correct usage and no errors:
 If you have QPDF installed:
