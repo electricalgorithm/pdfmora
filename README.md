@@ -65,7 +65,7 @@ If you haven't got QPDF installed:
 
 #### Note: SUDO access! (UPDATE: 15 March 2020)
 In merging process, we need to use QPDF program. Because of this, we'll check if your system has the program. If not script will install QPDF for you to move on it's job. For this installation, script
-going to need SUDO access. In case of you haven't started pdftron.sh script without sudo access, script will ask your pass. It's all safe. You can check the operation from source code.
+going to need SUDO access. In case of you haven't started pdfmora.sh script without sudo access, script will ask your pass. It's all safe. You can check the operation from source code.
 
 > Note: We're not recommend you to use this script with SUDO access. If it will need it, it's going to ask you.
 
