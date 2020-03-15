@@ -41,37 +41,34 @@ Example decleration for another location:
 ```
 ~$ ./pdftron.sh "http://xtzxtz.com/y/z/example&:.pdf" 2 5 outputFile.pdf
 ```
-
-## Note: SUDO access!
-As you run the program without sudo access. It will need your sudo password. As you can see in the script's source code, it's because program needs "sudo apt install qpdf" command. In merging process, we use qPDF. You can either run program with sudo:
+## Outputs for correct usage and no errors:
+If you have QPDF installed:
 ```
-~$ sudo ./pdftron.sh "http://xtzxtz.com/y/z/example&:.pdf" 2 5 outputFile.pdf
 ~ Thank you for using this program! Have a nice day!
 -- We've prepared everything for you! Working on it...
 -- PDFs are downloaded. There's nothing left, please wait.
--- If we need SUDO pass, please type it to install a program we need.
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
--- We merge them. Just a little wait.
+-- QPDF program has found. We'll use it to merge your pdfs.
+-- Merging process has completed. Just a little wait.
 -- Done! Everythings work fine. Your PDF is ready.
-
 ```
-Or you can either run program without SUDO access and type your password in program:
+If you haven't got QPDF installed:
 ```
-~$ ./pdftron.sh "http://xtzxtz.com/y/z/example&:.pdf" 2 5 outputFile.pdf
 ~ Thank you for using this program! Have a nice day!
 -- We've prepared everything for you! Working on it...
 -- PDFs are downloaded. There's nothing left, please wait.
--- If we need SUDO pass, please type it to install a program we need.
+-- We need SUDO access to install QPDF for merging pdfs.
 [sudo] password for $USER: 
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
--- We merge them. Just a little wait.
+-- QPDF has installed. Merging process started now.
+-- Merging process has completed. Just a little wait.
 -- Done! Everythings work fine. Your PDF is ready.
-
 ```
+
+## Note: SUDO access! (UPDATE: 15 March 2020)
+In merging process, we need to use QPDF program. Because of this, we'll check if your system has the program. If not script will install QPDF for you to move on it's job. For this installation, script
+going to need SUDO access. In case of you haven't started pdftron.sh script without sudo access, script will ask your pass. It's all safe. You can check the operation from source code.
+
+> Note: We're not recommend you to use this script with SUDO access. If it will need it, it's going to ask you.
+
 
 ## Contribution
-All contributions have excepted to make the script more stable, powerful and easy for the end user. Thank you for all.
+All contributions have excepted to make the script more stable, powerful and easy for the end user. Check out our projects. Thank you for all.

@@ -21,12 +21,26 @@ do
 	wget -q $newURL;
 done
 echo "-- PDFs are downloaded. There's nothing left, please wait.";
-echo "-- If we need SUDO pass, please type it to install a program we need.";
 
-# Installing and using QPDF to make merged PDF.
-sudo apt install qpdf -y > /dev/null
-qpdf --empty --pages *.pdf -- ../$outputName.pdf
-echo "-- We merge them. Just a little wait.";
+# Checking if QPDF is installed. If it is, merge the pdfs.
+# If it's not, download, install and then merge the pdfs.
+dpkg -s qpdf &> /dev/null
+if [ $? -eq  0 ]; then
+	echo "-- QPDF program has found. We'll use it to merge your pdfs."
+	qpdf --empty --pages *.pdf -- ../$outputName.pdf
+	echo "-- Merging process has completed. Just a little wait."
+else
+	echo "-- We need SUDO access to install QPDF for merging pdfs."
+	sudo apt-get install qpdf -y > /dev/null
+	if [ $? -eq 0 ]; then
+		echo "-- QPDF has installed. Merging process started now."
+		qpdf --empty --pages *.pdf -- ../$outputName.pdf
+		echo "-- Merging process has completed. Just a little wait."
+	else
+		echo "ERROR: Something happened during the QPDF installation."
+		echo Error code is: $?
+	fi
+fi
 
 # Cleaning the env.
 rm -f *
