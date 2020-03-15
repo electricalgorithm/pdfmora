@@ -1,8 +1,8 @@
 #! /bin/bash
-## For information: github.com/electricalgorithm/PDFtron
-## Version number: 1.2.5
+## For information: github.com/electricalgorithm/pdfmora
+## Version number: 1.3.5
 
-echo "~ Thank you for using this program! Have a nice day!";
+echo "~ Thank you for using pdfmora! Have a nice day!";
 
 URL=$1
 startedNumber=$2
