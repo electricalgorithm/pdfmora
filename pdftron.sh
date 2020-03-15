@@ -1,4 +1,6 @@
 #! /bin/bash
+## For information: github.com/electricalgorithm/PDFtron
+## Version number: 1.2.5
 
 echo "~ Thank you for using this program! Have a nice day!";
 
